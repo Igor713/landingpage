@@ -1,0 +1,15 @@
+@import "/src/styles/mixins/colors.scss";
+
+.container {
+   .text {
+      h1 {
+         font-weight: bold;
+         font-size: 70px;
+      }
+
+      p {
+         font-size: 30px;
+         opacity: 0.8;
+      }
+   }
+}
