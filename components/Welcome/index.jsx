@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import Button from '../Button';
 import Styles from './welcome.module.scss';
+import WelcomeStatistic from '../../public/images/welcome-statistic.svg';
 
 const Welcome = () => {
   return (
@@ -12,7 +14,9 @@ const Welcome = () => {
         </p>
         <Button title="Aumentar vendas" typeOf="secondary" />
       </div>
-      <div className={Styles.image}></div>
+      <div className={Styles.image}>
+        <Image src={WelcomeStatistic} alt="Estatística" />
+      </div>
     </div>
   );
 };

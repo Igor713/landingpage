@@ -1,0 +1,34 @@
+@import "/src/styles/mixins/colors.scss";
+
+.container {
+   padding: 30px 180px;
+   width: 100%;
+   background-color: $purple-color;
+   border-bottom: 0.5px solid $gray-color;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   .brand {
+      img {
+         max-width: 120px;
+         max-height: 50px;
+      }
+   }
+
+   .menu {
+      ul {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 25px;
+         list-style: none;
+
+         li {
+            a {
+               font-size: 18px;
+            }
+         }
+      }
+   }
+}

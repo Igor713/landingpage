@@ -1,7 +1,23 @@
 @import "/src/styles/mixins/colors.scss";
 
 .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 180px;
+   gap: 200px;
+   background-image: url("../../public/images/welcome-background.svg");
+   background-color: $purple-color;
+   background-repeat: no-repeat;
+   background-size: contain;
+   height: 100vh;
+
+
    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
       h1 {
          font-weight: bold;
          font-size: 70px;
