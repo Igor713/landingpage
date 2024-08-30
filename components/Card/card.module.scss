@@ -1,4 +1,35 @@
 @import '/src/styles/mixins/colors.scss';
 
-.card {
+.cardContainer {
+   display: flex;
+   gap: 50px;
+
+   .cardWrapper {
+      background-color: $white-color;
+      border-radius: 6px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .cardImage {
+         max-width: 80px;
+      }
+
+      .cardTitle {
+         text-align: left;
+         font-size: 30px;
+         letter-spacing: 0px;
+         color: $purple-color;
+         opacity: 1;
+      }
+
+      .cardDescription {
+         text-align: left;
+         font-size: 18px;
+         letter-spacing: opx;
+         color: $gray-color;
+         opacity: 1;
+      }
+   }
 }

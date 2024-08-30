@@ -1,34 +1,27 @@
 @import "/src/styles/mixins/colors.scss";
 
-.container {
+.featuresContainer {
    padding: 30px 180px;
    width: 100%;
    background-color: $purple-color;
-   border-bottom: 0.5px solid $gray-color;
    display: flex;
    align-items: center;
    justify-content: space-between;
+   flex-direction: column;
 
-   .brand {
-      img {
-         max-width: 120px;
-         max-height: 50px;
-      }
+   .featuresTitle {
+      text-align: center;
+      font-size: 65px;
+      letter-spacing: 0px;
+      color: $white-color;
+      opacity: 1;
    }
 
-   .menu {
-      ul {
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         gap: 25px;
-         list-style: none;
-
-         li {
-            a {
-               font-size: 18px;
-            }
-         }
-      }
+   .featuresDescription {
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 0px;
+      color: $gray-color;
+      opacity: 1;
    }
 }
