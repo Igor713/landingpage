@@ -1,10 +1,10 @@
 @import "/src/styles/mixins/colors.scss";
 
-.container {
+.welcomeContainer {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 30px 180px;
+   padding: 30px 200px;
    gap: 200px;
    background-image: url("../../public/images/welcome-background.svg");
    background-color: $purple-color;
@@ -13,19 +13,115 @@
    height: 100vh;
 
 
-   .text {
+   .welcomeWrapper {
       display: flex;
-      flex-direction: column;
-      gap: 40px;
+      gap: 20rem;
 
-      h1 {
-         font-weight: bold;
-         font-size: 70px;
+      .welcomePresentation {
+         display: flex;
+         flex-direction: column;
+         gap: 40px;
+         width: 50%;
+
+         .welcomeTitle {
+            font-weight: bold;
+            font-size: 70px;
+         }
+
+         .welcomeDescription {
+            font-size: 30px;
+            opacity: 0.8;
+         }
       }
 
-      p {
-         font-size: 30px;
-         opacity: 0.8;
+      .welcomeInformation {
+         width: 50%;
+         background-color: #ffffff;
+         border-radius: 12px;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+         .cardContent {
+            padding: 20px;
+            border-bottom: 8px solid rgba(0, 0, 0, 0.1);
+         }
+
+         .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2 {
+               margin: 0;
+               font-size: 24px;
+               color: #4b0a7a;
+            }
+         }
+
+         .percentage {
+            background-color: #2cdd9b;
+            border-radius: 12px;
+            padding: 6px 12px;
+            color: #ffffff;
+            font-weight: bold;
+
+            span {
+               font-size: 14px;
+            }
+         }
+
+         .cardContent p {
+            font-size: 14px;
+            color: #4b0a7a;
+            margin: 10px 0;
+         }
+
+         .stats {
+            display: flex;
+            align-items: center;
+         }
+
+         .statItem {
+            display: flex;
+            align-items: center;
+
+            .icon {
+               margin-right: 8px;
+            }
+
+            .value {
+               font-size: 36px;
+               color: #4b0a7a;
+            }
+         }
+
+         .cardFooter {
+            background-color: #f2f2f2;
+            border-radius: 0 0 12px 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+         }
+
+         .footerItem {
+            display: flex;
+            align-items: center;
+
+            .icon {
+               margin-right: 8px;
+            }
+
+            .label {
+               font-size: 18px;
+               color: #4b0a7a;
+            }
+
+            .value {
+               font-size: 24px;
+               font-weight: bold;
+               color: #4b0a7a;
+               margin-left: auto;
+            }
+         }
       }
    }
 }

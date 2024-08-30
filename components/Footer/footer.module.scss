@@ -1,0 +1,38 @@
+@import "/src/styles/mixins/colors.scss";
+
+.container {
+   padding-top: 72px;
+   background-color: $purple-color;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+.column {
+   margin-top: 4.5rem;
+
+   &.columnPrincipal {
+      margin-top: 0px;
+   }
+
+   .title {
+      color: $white-color;
+   }
+
+   h1 {
+      color: $green-color;
+   }
+
+   p {}
+
+   &.alignRight {
+      text-align: right;
+   }
+
+   .icons {
+      display: inline-grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+   }
+}

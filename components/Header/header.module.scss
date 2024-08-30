@@ -1,7 +1,7 @@
 @import "/src/styles/mixins/colors.scss";
 
 .container {
-   padding: 30px 180px;
+   padding: 20px 200px;
    width: 100%;
    background-color: $purple-color;
    border-bottom: 0.5px solid $gray-color;
@@ -10,8 +10,10 @@
    justify-content: space-between;
 
    .brand {
+      cursor: pointer;
+
       img {
-         max-width: 120px;
+         max-width: 130px;
          max-height: 50px;
       }
    }
@@ -27,6 +29,12 @@
          li {
             a {
                font-size: 18px;
+               transition: all 0.5;
+
+               &:hover {
+                  text-decoration: underline;
+                  transition: all 0.5;
+               }
             }
          }
       }

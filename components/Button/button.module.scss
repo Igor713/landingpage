@@ -1,20 +1,47 @@
 @import "/src/styles/mixins/colors.scss";
 
 .button {
-   padding: 15px 50px;
-   border-radius: 5px;
-   font-size: 16px;
-   font-weight: bold;
-   border: none;
-   width: fit-content;
-
    &.primary {
       background-color: $green-color;
       color: $white-color;
+      cursor: pointer;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: 0.5s;
+      font-weight: bold;
+
+      &:hover {
+         background-color: #0a8535;
+         transition: 0.5s;
+      }
    }
 
    &.secondary {
       background-color: $white-color;
       color: $purple-color;
+      cursor: pointer;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: 0.5s;
+      font-weight: bold;
+
+      &:hover {
+         background-color: $green-color;
+         color: $white-color;
+         transition: 0.5s;
+      }
+   }
+
+   &.full {
+      background-color: $green-color;
+      color: $white-color;
+      padding: 21px;
+      width: 100%;
+      font-size: 21px;
+      font-weight: 600px;
    }
 }
