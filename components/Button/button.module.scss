@@ -22,16 +22,16 @@
       background-color: $white-color;
       color: $purple-color;
       cursor: pointer;
-      padding: 10px 25px;
+      padding: 20px 70px;
       border: none;
       border-radius: 5px;
       font-size: 16px;
       transition: 0.5s;
       font-weight: bold;
+      width: fit-content;
 
       &:hover {
-         background-color: $green-color;
-         color: $white-color;
+         background-color: #b0b0b0;
          transition: 0.5s;
       }
    }
