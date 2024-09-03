@@ -6,7 +6,7 @@
    background-color: $purple-color;
    background-repeat: no-repeat;
    background-size: contain;
-
+   height: 90vh;
 
    .welcomeWrapper {
       display: flex;
@@ -33,13 +33,17 @@
          width: 40%;
          background-color: #ffffff;
          border-radius: 12px;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
          .informationWrapper {
             display: flex;
             padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
             .informationTitle {
+               display: flex;
+               flex-direction: column;
+               gap: 15px;
+
                .title {
                   font-size: 35px;
                   font-weight: bold;
@@ -52,15 +56,23 @@
 
                .statsWrapper {
                   display: flex;
-                  justify-content: center;
+                  justify-content: flex-start;
                   align-items: center;
+                  gap: 10px;
 
-                  .statesIcon {}
+                  .statesIcon {
+                     img {
+                        width: 100%;
+                        max-width: 60px;
+                        height: 60px;
+                        color: $green-color;
+                     }
+                  }
 
                   .statesValue {
                      color: $purple-color;
-                     font-size: 35px;
-                     font-weight: 400;
+                     font-size: 40px;
+                     font-weight: 500;
                   }
                }
             }
@@ -69,30 +81,47 @@
                background-color: #2cdd9b;
                border-radius: 12px;
                padding: 6px 12px;
-               color: $white-color;
+               color: #ffffff;
                font-weight: bold;
-
-               span {}
+               max-height: 60px;
+               display: flex;
+               justify-content: center;
+               gap: 5px;
+               align-items: center;
+               font-size: 26px;
             }
          }
 
          .cardFooter {
-            background-color: #f2f2f2;
             border-radius: 0 0 12px 12px;
-            padding: 20px;
+            padding: 30px;
             display: flex;
-            align-items: center;
-         }
+            justify-content: space-between;
 
-         .cardFooterTitle {
-            display: flex;
-            align-items: center;
-         }
+            .cardFooterTitle {
+               font-size: 30px;
+               color: $purple-color;
+               font-weight: bold;
+            }
 
-         .cardFooterItem {
-            .icon {}
+            .cardFooterItem {
+               display: flex;
+               justify-content: center;
+               gap: 10px;
 
-            .value {}
+               .icon {
+                  img {
+                     width: 100%;
+                     max-width: 30px;
+                     max-height: 30px;
+                  }
+               }
+
+               .value {
+                  color: $purple-color;
+                  font-size: 30px;
+               }
+            }
          }
       }
    }

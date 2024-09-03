@@ -5,25 +5,25 @@ import Logo from '../../public/images/Outline.svg';
 const Card = () => {
   const cardsContent = [
     {
-      title: 'Card 1',
+      title: 'Digital Strategy',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat consectetur facilis id, ut praesentium veniam.',
       image: Logo,
     },
     {
-      title: 'Card 2',
+      title: 'Estratégia digital',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat consectetur facilis id, ut praesentium veniam.',
       image: Logo,
     },
     {
-      title: 'Card 3',
+      title: 'Digital Strategy',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat consectetur facilis id, ut praesentium veniam.',
       image: Logo,
     },
     {
-      title: 'Card 4',
+      title: 'Estratégia digital',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat consectetur facilis id, ut praesentium veniam.',
       image: Logo,

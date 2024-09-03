@@ -1,0 +1,21 @@
+@import "/src/styles/mixins/colors.scss";
+
+.menuFooterTitle {
+   color: $green-color;
+   font-size: 20px;
+   margin-bottom: 20px;
+}
+
+.menuFooterList {
+   list-style: none;
+
+   .menuFooterItem {
+      color: $white-color;
+      margin-bottom: 8px;
+      cursor: pointer;
+
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}

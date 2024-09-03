@@ -1,6 +1,8 @@
 import Button from '../Button';
 import Styles from './welcome.module.scss';
 import Image from 'next/image';
+import GroupPeople from '../../public/images/group.png';
+import Bag from '../../public/images/bag.png';
 
 const Welcome = () => {
   return (
@@ -26,14 +28,15 @@ const Welcome = () => {
               </p>
               <div className={Styles.statsWrapper}>
                 <div className={Styles.statesIcon}>
-                  <Image src="" alt="Leads Icon" />
+                  <Image src={GroupPeople} alt="Leads Icon" />
                 </div>
                 <div className={Styles.statesValue}>10.102</div>
               </div>
             </div>
 
             <div className={Styles.percentage}>
-              <span>&uarr; 43%</span>
+              <div>&uarr; </div>
+              <div>43%</div>
             </div>
           </div>
 
@@ -41,7 +44,7 @@ const Welcome = () => {
             <div className={Styles.cardFooterTitle}>Vendas</div>
             <div className={Styles.cardFooterItem}>
               <div className={Styles.icon}>
-                <Image src="" alt="Sales Icon" />
+                <Image src={Bag} alt="Sales Icon" />
               </div>
               <div className={Styles.value}>1.923</div>
             </div>

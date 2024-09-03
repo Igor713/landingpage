@@ -1,38 +1,33 @@
 @import "/src/styles/mixins/colors.scss";
 
-.container {
-   padding-top: 72px;
-   background-color: $purple-color;
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-}
+.footerContainer {
+   background-color: hsl(279, 100%, 12%);
+   padding: 70px 200px 0 200px;
 
-.column {
-   margin-top: 4.5rem;
+   .footerWrapper {
+      display: flex;
 
-   &.columnPrincipal {
-      margin-top: 0px;
+      .column {
+         flex: 1;
+      }
+
+      .mainColumn {
+         .logo {
+            margin-bottom: 10px;
+         }
+
+         .phone {
+            font-size: 26px;
+            margin-bottom: 10px;
+         }
+
+         .email {}
+      }
    }
 
-   .title {
-      color: $white-color;
-   }
-
-   h1 {
-      color: $green-color;
-   }
-
-   p {}
-
-   &.alignRight {
-      text-align: right;
-   }
-
-   .icons {
-      display: inline-grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
+   .allRightReserved {
+      padding: 100px;
+      padding-bottom: 10px;
+      text-align: center;
    }
 }

@@ -1,0 +1,27 @@
+@import "/src/styles/mixins/colors.scss";
+
+.socialMediaTitle {
+   color: $green-color;
+   font-size: 20px;
+   margin-bottom: 20px;
+}
+
+.socialMediaList {
+   display: flex;
+   gap: 15px;
+
+   .url {
+      cursor: pointer;
+      transition: .5s;
+
+      &:hover {
+         scale: 1.2;
+         transition: .5s;
+      }
+
+      .icon {
+         width: 30px;
+         height: 30px;
+      }
+   }
+}
