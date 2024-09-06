@@ -1,42 +1,101 @@
-@import "/src/styles/mixins/colors.scss";
+@import '/src/styles/mixins/colors.scss';
+@import '/src/styles/mixins/responsive.scss';
 
 .container {
-   padding: 20px 200px;
-   width: 100%;
-   background-color: $purple-color;
-   border-bottom: 0.5px solid $gray-color;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+  padding: 20px 200px;
+  width: 100%;
+  background-color: $purple-color;
+  border-bottom: 0.5px solid $gray-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
 
-   .brand {
-      cursor: pointer;
+  .hamburgerIcon {
+    display: none;
+    cursor: pointer;
+  }
 
-      img {
-         max-width: 130px;
-         max-height: 50px;
+  .brand {
+    cursor: pointer;
+
+    img {
+      max-width: 130px;
+      max-height: 50px;
+    }
+  }
+
+  .menu {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      list-style: none;
+
+      li {
+        a {
+          font-size: 18px;
+          transition: all 0.5;
+
+          &:hover {
+            text-decoration: underline;
+            transition: all 0.5;
+          }
+        }
       }
-   }
+    }
+  }
 
-   .menu {
+  .action {
+    display: block;
+    &.mobile {
+      display: none;
+    }
+  }
+}
+
+@include mobile {
+  .container {
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    .menu {
+      position: fixed;
+      padding: 10px;
+      top: 75px;
+      right: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: $purple-color;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 1;
+
+      &.menuOpen {
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+
       ul {
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         gap: 25px;
-         list-style: none;
-
-         li {
-            a {
-               font-size: 18px;
-               transition: all 0.5;
-
-               &:hover {
-                  text-decoration: underline;
-                  transition: all 0.5;
-               }
-            }
-         }
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
       }
-   }
+    }
+
+    .action {
+      display: none;
+
+      &.mobile {
+        display: block;
+        margin-top: 15px;
+      }
+    }
+
+    .hamburgerIcon {
+      display: block;
+    }
+  }
 }
