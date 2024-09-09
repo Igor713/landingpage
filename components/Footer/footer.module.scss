@@ -1,4 +1,5 @@
 @import "/src/styles/mixins/colors.scss";
+@import '/src/styles/mixins/responsive.scss';
 
 .footerContainer {
    background-color: hsl(279, 100%, 12%);
@@ -29,5 +30,42 @@
       padding: 100px;
       padding-bottom: 10px;
       text-align: center;
+   }
+}
+
+@include mobile {
+   .footerContainer {
+      background-color: hsl(279, 100%, 12%);
+      padding: 20px;
+
+      .footerWrapper {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+
+         .column {
+            flex: 1;
+         }
+
+         .mainColumn {
+            .logo {
+               margin-bottom: 10px;
+            }
+
+            .phone {
+               font-size: 26px;
+               margin-bottom: 10px;
+            }
+
+            .email {}
+         }
+      }
+
+      .allRightReserved {
+         padding: 0;
+         margin-top: 40px;
+         text-align: left;
+         font-size: 12px;
+      }
    }
 }

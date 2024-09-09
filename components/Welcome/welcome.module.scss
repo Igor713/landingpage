@@ -1,4 +1,5 @@
 @import '/src/styles/mixins/colors.scss';
+@import '/src/styles/mixins/responsive.scss';
 
 .welcomeContainer {
   padding: 280px 200px 0 200px;
@@ -120,6 +121,118 @@
           .value {
             color: $purple-color;
             font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .welcomeContainer {
+    padding: 10px;
+    background-image: url('../../public/images/welcome-background.svg');
+    background-color: $purple-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+
+    .welcomeWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .welcomePresentation {
+        margin-top: 90px;
+        gap: 20px;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+
+        .presentationTitle {
+          font-weight: bold;
+          font-size: 28px;
+        }
+
+        .presentationDescription {
+          font-size: 16px;
+          opacity: 0.8;
+        }
+      }
+
+      .welcomeInformation {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 12px;
+
+        .informationWrapper {
+          padding: 20px;
+          gap: 15px;
+
+          .informationTitle {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .title {
+              font-size: 28px;
+              font-weight: bold;
+              color: $purple-color;
+            }
+
+            .descrition {}
+
+            .statsWrapper {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 10px;
+
+              .statesIcon {
+                img {
+                  width: 100%;
+                  max-width: 40px;
+                  height: 40px;
+                  color: $green-color;
+                }
+              }
+
+              .statesValue {
+                color: $purple-color;
+                font-size: 28px;
+                font-weight: 500;
+              }
+            }
+          }
+
+          .percentage {
+            max-height: 50px;
+            font-size: 20px;
+          }
+        }
+
+        .cardFooter {
+          border-radius: 0 0 12px 12px;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+
+          .cardFooterTitle {
+            font-size: 28px;
+            color: $purple-color;
+            font-weight: bold;
+          }
+
+          .cardFooterItem {
+
+            .icon {
+              img {}
+            }
+
+            .value {
+              color: $purple-color;
+              font-size: 28px;
+            }
           }
         }
       }

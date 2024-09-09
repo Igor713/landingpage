@@ -1,4 +1,5 @@
 @import "/src/styles/mixins/colors.scss";
+@import '/src/styles/mixins/responsive.scss';
 
 .contactContainer {
    background-color: $purple-color;
@@ -63,6 +64,77 @@
             margin-bottom: 5px;
             font-size: 18px;
             color: black;
+         }
+      }
+   }
+}
+
+@include mobile {
+   .contactContainer {
+      background-color: $purple-color;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 20px;
+      background-image: url("../../public/images/welcome-background.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100vh;
+
+      .presentationWrapper {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+
+         .presentationWarn {
+            font-size: 22px;
+            color: $green-color;
+         }
+
+         .presentationTitle {
+            font-size: 28px;
+            color: $white-color;
+         }
+
+         .presentationDescription {
+            font-size: 16px;
+            color: $gray-light-color;
+         }
+
+      }
+
+      .formWrapper {
+         width: 100%;
+         background-color: $white-color;
+         padding: 30px 20px;
+         border-radius: 10px;
+         height: fit-content;
+
+         .formTitle {
+            text-align: left;
+            font-size: 22px;
+         }
+
+         form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input {
+               background: #f0efef 0% 0% no-repeat padding-box;
+               border-radius: 5px;
+               opacity: 1;
+               border: none;
+               padding: 12px;
+               margin-bottom: 5px;
+               font-size: 18px;
+               color: black;
+
+               &::placeholder {
+                  font-size: 16px;
+               }
+            }
          }
       }
    }
