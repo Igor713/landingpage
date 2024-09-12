@@ -1,8 +1,14 @@
 import Styles from './select.module.scss';
 
-const Select = ({ placeholder, required, options }) => {
+const Select = ({ placeholder, required, options, id, name, onBlur }) => {
   return (
-    <select className={Styles.select} required={required}>
+    <select
+      id={id}
+      name={name}
+      className={Styles.select}
+      required={required}
+      onBlur={onBlur}
+    >
       <option value={placeholder} selected>
         {placeholder}
       </option>
