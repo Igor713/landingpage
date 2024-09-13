@@ -11,13 +11,13 @@ export default async function handler(req, res) {
   });
 
   try {
-    const sentMessage = await client.sendAsync({
+    const messageResponse = await client.sendAsync({
       text: messageBody,
-      from: 'you <username@your-email.com>',
-      to: 'someone <someone@your-email.com>, another <another@your-email.com>',
+      from: 'robottec70@gmail.com',
+      to: 'robottec70@gmail.com',
       subject: 'Lead - Landingpage',
     });
-    console.log(sentMessage);
+    console.log(messageResponse);
   } catch (error) {
     console.log(error);
   }

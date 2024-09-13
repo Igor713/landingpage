@@ -9,7 +9,7 @@ const Select = ({ placeholder, required, options, id, name, onBlur }) => {
       required={required}
       onBlur={onBlur}
     >
-      <option value={placeholder} selected>
+      <option value={placeholder} defaultValue>
         {placeholder}
       </option>
       {options?.map((option, index) => (

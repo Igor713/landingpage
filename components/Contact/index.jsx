@@ -4,6 +4,9 @@ import Select from '../Select';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Styles from './contact.module.scss';
+// import { Loading } from "../loading/index";
+// import { SuccessModal } from "../successModal";
+// import { FailModal } from "../failModal/index";
 
 const Contact = () => {
   const optionsContent = [
@@ -26,7 +29,10 @@ const Contact = () => {
         .email('E-mail inválido')
         .required('Campo obrigatório'),
       phone: Yup.string()
-        .matches('', 'Digite um telefone válido')
+        .matches(
+          // '/^(?d{2})?[s-]?[s9]?d{4}-?d{4}$/',
+          'Digite um telefone válido',
+        )
         .required('Campo obrigatório'),
       website: Yup.string(),
       media: Yup.string(),
@@ -37,12 +43,13 @@ const Contact = () => {
   });
 
   const handleSubmitForm = (values) => {
+    console.log(values);
     axios
-      .post('/api/senEmail', {
+      .post('/api/sendEmail', {
         messageBody: `\n Nome: ${values.name}, 
           \n E-mail: ${values.email}, 
           \n Telefone: ${values.phone}, 
-          \n Site: ${values.site}, 
+          \n Site: ${values.website}, 
           Midia: ${values.media}`,
       })
       .then(() => console.log('True'))
@@ -72,7 +79,9 @@ const Contact = () => {
             type="text"
             placeholder="Nome completo"
             required
+            value={formik.values.name}
             onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
           />
           <input
             id="email"
@@ -80,7 +89,9 @@ const Contact = () => {
             type="email"
             placeholder="Email"
             required
+            value={formik.values.email}
             onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
           />
           <input
             id="phone"
@@ -88,7 +99,9 @@ const Contact = () => {
             type="text"
             placeholder="Celular/Whatsapp"
             required
+            value={formik.values.phone}
             onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
           />
           <input
             id="website"
@@ -96,18 +109,20 @@ const Contact = () => {
             type="text"
             placeholder="Site"
             required
+            value={formik.values.website}
             onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
           />
           <Select
             id="select"
             name="select"
             placeholder="Orçamento para mída"
             options={optionsContent}
-            required
             onBlur={formik.handleBlur}
+            value={formik.values.media}
           />
 
-          <Button title={'Enviar'} type="submit" typeOf={'full'} />
+          <Button type="submit" title={'Enviar'} typeOfClass={'full'} />
         </form>
       </div>
     </div>

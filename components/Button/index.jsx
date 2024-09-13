@@ -1,12 +1,8 @@
 import Styles from './button.module.scss';
 
-const Button = ({ title, type, typeOf, onClick }) => {
+const Button = ({ title, type, typeOfClass }) => {
   return (
-    <button
-      className={`${Styles.button} ${Styles[typeOf]}`}
-      type={type}
-      onClick={onClick()}
-    >
+    <button type={type} className={`${Styles.button} ${Styles[typeOfClass]}`}>
       {title}
     </button>
   );
