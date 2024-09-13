@@ -39,7 +39,10 @@ const Contact = () => {
     }),
     validateOnChange: false,
     validateOnBlur: false,
-    onSubmit: (values) => handleSubmitForm(values),
+    onSubmit: (values) => {
+      console.log(values);
+      handleSubmitForm(values);
+    },
   });
 
   const handleSubmitForm = (values) => {
@@ -53,7 +56,7 @@ const Contact = () => {
           Midia: ${values.media}`,
       })
       .then(() => console.log('True'))
-      .catch(() => console.log('False'));
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -72,7 +75,7 @@ const Contact = () => {
       <div className={Styles.formWrapper}>
         <h1 className={Styles.formTitle}>Fale com um especialista</h1>
 
-        <form className={Styles.form} onSubmit={formik.handleSubmit}>
+        <form id={Styles.form} onSubmit={formik.handleSubmit}>
           <input
             id="name"
             name="name"
@@ -87,7 +90,7 @@ const Contact = () => {
             id="email"
             name="email"
             type="email"
-            placeholder="Email"
+            placeholder="E-mail"
             required
             value={formik.values.email}
             onBlur={formik.handleBlur}

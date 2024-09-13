@@ -1,4 +1,4 @@
-import { SMTPClient } from 'emailjs';
+import { SMTPClient, Message } from 'emailjs';
 
 export default async function handler(req, res) {
   const { messageBody } = req.body;
@@ -6,17 +6,19 @@ export default async function handler(req, res) {
   const client = new SMTPClient({
     user: process.env.EMAIL,
     password: process.env.PASSWORD,
-    host: 'smtp.your-email.com',
+    host: 'smtp.gmail.com',
     ssl: true,
   });
 
+  const message = new Message({
+    text: messageBody,
+    from: 'robottec70@gmail.com',
+    to: 'robottec70@gmail.com',
+    subject: 'Lead - Landingpage',
+  });
+
   try {
-    const messageResponse = await client.sendAsync({
-      text: messageBody,
-      from: 'robottec70@gmail.com',
-      to: 'robottec70@gmail.com',
-      subject: 'Lead - Landingpage',
-    });
+    const messageResponse = await client.sendAsync(message);
     console.log(messageResponse);
   } catch (error) {
     console.log(error);
