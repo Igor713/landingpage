@@ -1,13 +1,22 @@
 import Styles from './select.module.scss';
 
-const Select = ({ placeholder, required, options, id, name, onBlur }) => {
+const Select = ({
+  placeholder,
+  required,
+  options,
+  id,
+  name,
+  value,
+  onChange,
+}) => {
   return (
     <select
       id={id}
       name={name}
       className={Styles.select}
       required={required}
-      onBlur={onBlur}
+      value={value}
+      onChange={onChange}
     >
       <option value={placeholder} defaultValue>
         {placeholder}
