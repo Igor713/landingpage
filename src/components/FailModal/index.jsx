@@ -1,5 +1,5 @@
 import { FiXSquare } from 'react-icons/fi';
-import Button from '../button';
+import Button from '../Button';
 import Styles from './failmodal.module.scss';
 
 export const FailModal = ({ closeModal }) => {
@@ -9,7 +9,7 @@ export const FailModal = ({ closeModal }) => {
         <FiXSquare />
         <p>Não foi possível enviar no momento, tente novamente mais tarde.</p>
         <div className={Styles.okButtonContainer} onClick={closeModal}>
-          <Button title="fechar" />
+          <Button title="fechar" typeOfClass={primary} />
         </div>
       </div>
     </div>

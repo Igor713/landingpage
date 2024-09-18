@@ -1,8 +1,8 @@
 import Button from '../Button';
 import Styles from './welcome.module.scss';
 import Image from 'next/image';
-import GroupPeople from '../../public/images/group.png';
-import Bag from '../../public/images/bag.png';
+import GroupPeople from '../../../public/images/group.png';
+import Bag from '../../../public/images/bag.png';
 
 const Welcome = () => {
   return (
@@ -16,7 +16,7 @@ const Welcome = () => {
             Somos uma agência de performance digital, aceleramos vendas e
             aquisição de leads para grandes marcas.
           </p>
-          <Button title="Aumentar vendas" typeOf="secondary" />
+          <Button title="Aumentar vendas" typeOfClass="secondary" />
         </div>
 
         <div className={Styles.welcomeInformation}>

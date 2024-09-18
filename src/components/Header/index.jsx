@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from '../Button';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '../../public/images/logo.svg';
+import Logo from '../../../public/images/logo.svg';
 import Styles from './header.module.scss';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -42,7 +42,7 @@ const Header = () => {
       </div>
 
       <div className={Styles.action}>
-        <Button title="Fale conosco" typeOf="primary" />
+        <Button title="Fale conosco" typeOfClass="primary" />
       </div>
     </div>
   );

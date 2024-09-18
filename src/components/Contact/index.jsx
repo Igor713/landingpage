@@ -1,16 +1,20 @@
-import axios from 'axios';
-import { useState } from 'react';
+import { SuccessModal } from '../successModal';
+import { FailModal } from '../FailModal';
 import Button from '../Button';
 import Select from '../Select';
 import { Loading } from '../Loading';
+
+import { useState } from 'react';
 import { useFormik } from 'formik';
+import axios from 'axios';
 import * as Yup from 'yup';
-// import { SuccessModal } from "../successModal";
-// import { FailModal } from "../failModal/index";
+
 import Styles from './contact.module.scss';
 
 const Contact = () => {
   const [isLoading, setLoading] = useState(false);
+  const [successModal, setSuccessModal] = useState(false);
+  const [failModal, setFaiModal] = useState(false);
 
   const optionsContent = [
     { label: 'Instagram', value: 'instagram' },
@@ -55,16 +59,25 @@ const Contact = () => {
       .then(() => {
         setLoading(false);
         formik.resetForm();
+        setSuccessModal(true);
       })
       .catch((error) => {
         console.log(error);
         setLoading(false);
+        setFaiModal(true);
       });
+  };
+
+  const closeModal = () => {
+    setFaiModal(false);
+    setSuccessModal(false);
   };
 
   return (
     <>
       {isLoading && <Loading />}
+      {successModal && <SuccessModal closeModal={closeModal} />}
+      {failModal && <FailModal closeModal={closeModal} />}
       <div className={Styles.contactContainer}>
         <div className={Styles.presentationWrapper}>
           <span className={Styles.presentationWarn}>ENTRE EM CONTATO</span>

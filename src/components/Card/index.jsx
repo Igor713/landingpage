@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Styles from './card.module.scss';
-import Logo from '../../public/images/Outline.svg';
+import Logo from '../../../public/images/Outline.svg';
 
 const Card = () => {
   const cardsContent = [

@@ -3,7 +3,7 @@
 
 .welcomeContainer {
   padding: 280px 200px 0 200px;
-  background-image: url('../../public/images/welcome-background.svg');
+  background-image: url('../../../public/images/welcome-background.svg');
   background-color: $purple-color;
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,7 +131,7 @@
 @include mobile {
   .welcomeContainer {
     padding: 10px;
-    background-image: url('../../public/images/welcome-background.svg');
+    background-image: url('../../../public/images/welcome-background.svg');
     background-color: $purple-color;
     background-repeat: no-repeat;
     background-size: cover;
